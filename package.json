@@ -1,18 +1,25 @@
 {
-  "name": "simple-vue-boilerplate",
-  "version": "1.0.0",
-  "description": "A very simple todo app to provide a taste of developing with single-file components.",
-  "keywords": [
-    "vue",
-    "vuetify",
-    "vue-router",
-    "vuex"
-  ],
-  "main": "index.js",
+  "name": "simple-vue-template",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "test:unit": "vue-cli-service test:unit"
+  },
   "dependencies": {
-    "vue": "2.5.3",
-    "vue-router": "3.0.1",
-    "vuetify": "1.2.2",
-    "vuex": "3.0.1"
+    "@vue/cli": "^4.5.15",
+    "axios": "^0.24.0",
+    "vue": "^2.6.14",
+    "vue-router": "^3.5.3",
+    "vue-template-compiler": "^2.6.14",
+    "vuetify": "^2.4.0"
+  },
+  "devDependencies": {
+    "@vue/cli-service": "^3.0.0-rc.10",
+    "sass": "~1.32.0",
+    "sass-loader": "^10.0.0",
+    "vue-cli-plugin-vuetify": "~2.4.3",
+    "vuetify-loader": "^1.7.0"
   }
 }
