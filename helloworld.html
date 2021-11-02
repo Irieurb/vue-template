@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VueJS Workshop</title>
+</head>
+<body>
+
+<div id="app" style="text-align: center">
+    <h2>Hi, ich bin {{ name }}</h2>
+
+    <input v-model="name"/>
+
+    <h3>Meine Hobbies</h3>
+    <ul>
+        <li v-for="hobby in hobbies">{{ hobby }}</li>
+    </ul>
+
+    <input v-model="newHobby"/>
+    <button @click="addHobby">Speichern</button>
+
+
+    <h3>Q&A</h3>
+    <ul>
+        <li v-for="item in qa">
+            <span v-if="item.show === 1">Frage: {{ item.q }}</span>
+        </li>
+    </ul>
+
+    <h2 v-if="show === true">Siehst Du mich?</h2>
+
+
+</div>
+
+<script src="https://unpkg.com/vue"></script>
+<script>
+    const app = new Vue({
+        el: '#app',
+
+        data: {
+
+            name: 'Martin',
+            hobbies: ["Angeln", "Lesen", "Malen"],
+            newHobby: '',
+            qa: [
+                { q: "Warum ist die Banane krumm?", a: "Wenn sie gerade wäre", show: 1},
+                { q: "Warum ist die Banane krumm?", a: "Wenn sie gerade wäre", show: 0}
+            ],
+            show: false
+        },
+
+        methods: {
+            addHobby: function () {
+                this.hobbies.push(this.newHobby)
+            }
+        }
+    })
+</script>
+</body>
+</html>

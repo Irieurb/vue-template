@@ -1,0 +1,18 @@
+{
+  "name": "simple-vue-boilerplate",
+  "version": "1.0.0",
+  "description": "A very simple todo app to provide a taste of developing with single-file components.",
+  "keywords": [
+    "vue",
+    "vuetify",
+    "vue-router",
+    "vuex"
+  ],
+  "main": "index.js",
+  "dependencies": {
+    "vue": "2.5.3",
+    "vue-router": "3.0.1",
+    "vuetify": "1.2.2",
+    "vuex": "3.0.1"
+  }
+}
